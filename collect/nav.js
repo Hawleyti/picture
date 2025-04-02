@@ -26,3 +26,20 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error("Error loading nav.html:", error);
         });
 });
+
+// 打开模态框并显示图片
+function openModal(img) {
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImage");
+    var captionText = document.getElementById("caption");
+    
+    modal.style.display = "block"; // 显示模态框
+    modalImg.src = img.src; // 设置模态框中的图片为点击的图片
+    captionText.innerHTML = img.alt; // 设置图片的描述
+}
+
+// 关闭模态框
+function closeModal() {
+    var modal = document.getElementById("imageModal");
+    modal.style.display = "none"; // 隐藏模态框
+}
